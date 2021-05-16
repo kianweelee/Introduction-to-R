@@ -93,3 +93,75 @@ df
 ```
     output: NULL
     
+## Lists
+- Similar to vector but can store multiple data types as oppose to only one in vector.
+- List can be created using the ```list()``` syntax.
+
+Example:
+```R
+df <- list('A', TRUE, 1, 1.1)
+df
+```
+```
+  [[1]]
+  [1] "A"
+
+  [[2]]
+  [1] TRUE
+
+  [[3]]
+  [1] 1
+
+  [[4]]
+  [1] 1.1
+```
+### Searching for items in a list
+To search, we can use index to find the items.
+
+```R
+df1 <- list(c('A','B'), 2, TRUE)
+df1
+```
+```
+[[1]]
+[1] "A" "B"
+
+[[2]]
+[1] 2
+
+[[3]]
+[1] TRUE
+```
+Notice that the first index is in between ```[[]]```? When we reference the list, instead of indexing the first element as ```[1]```, we do it as ```[[1]]```.
+
+So to find the first item in the list, we use ```df1[[1]]```. But what if we want to find "A"? Well, we can do ```df1[[1]][1]``` for "A" and ```df1[[1]][2]``` for "B".
+
+### Modifying items in a list
+```R
+df1 <- list(c('A','B'), 2, TRUE)
+df1
+```
+```
+[[1]]
+[1] "A" "B"
+
+[[2]]
+[1] 2
+
+[[3]]
+[1] TRUE
+```
+Lets say we want to modify the first index and change "B" to "C".
+We can:
+
+```R
+df1[[1]][2] <- "C"
+```
+
+### Deleting components from a list
+Similar to vectors, we can assign ```NULL``` to the index.
+For example if we want to remove the first index containing a vector of "A" and "B":
+
+```R
+df1[[1]] <- NULL
+```
