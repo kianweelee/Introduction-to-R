@@ -1,4 +1,4 @@
-# R Objects
+# R Objects - Vectors and Lists
 
 ## What is an R object?
 They are common data structures that has its own methods and attributes.
